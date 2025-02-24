@@ -21,5 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Media Player"
 include(":app")
-include(":feature")
 include(":features")

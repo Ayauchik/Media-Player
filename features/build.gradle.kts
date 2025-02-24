@@ -90,33 +90,34 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Retrofit for API Calls
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.gson)
+
 
     // Coroutines for background tasks
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
 
     // Lifecycle ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
     // Koin for Dependency Injection
-    implementation("io.insert-koin:koin-android:3.5.0")
+    implementation(libs.koin.android)
+    // Used Hilt, not Koin (but can implement that too)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 
-    implementation("com.google.dagger:hilt-android:2.48")
-    ksp("com.google.dagger:hilt-android-compiler:2.48")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation(libs.androidx.media3.exoplayer)
+    implementation(libs.androidx.media3.ui)
 
-    implementation("androidx.media3:media3-exoplayer:1.5.1")
-    implementation("androidx.media3:media3-ui:1.5.1")
+    implementation(libs.coil.compose)
+    implementation(libs.accompanist.swiperefresh)
+    implementation(libs.androidx.foundation)
+    implementation(libs.androidx.foundation.layout)
+    implementation(libs.androidx.material)
 
-    implementation("io.coil-kt:coil-compose:2.7.0")
-    implementation("com.google.accompanist:accompanist-swiperefresh:0.31.1-alpha")
-    implementation("androidx.compose.foundation:foundation:1.7.8")
-    implementation("androidx.compose.foundation:foundation-layout:1.7.8")
-    implementation("androidx.compose.material:material:1.7.8")
-
-    implementation("com.google.code.gson:gson:2.10.1")
     implementation(libs.androidx.compose.animation)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
